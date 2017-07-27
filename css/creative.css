@@ -455,7 +455,6 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: white;
-  border-color: white;
 }
 .btn-default .badge {
   color: white;
@@ -464,7 +463,6 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
   color: white;
   background-color: #ff00f4;
-  border-color: #ff00f4;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -503,7 +501,6 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #ff00f4;
-  border-color: #ff00f4;
 }
 .btn-primary .badge {
   color: #ff00f4;
