@@ -59,8 +59,8 @@ blockquote {
   font-style: italic;
   color: #777777; }
 
-.about_me_28 {
-  font-size: 28px;
+.about_me_23 {
+  font-size: 23px;
 }
 
 .about_me_25 {
@@ -120,7 +120,7 @@ blockquote {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 .bg-fade{
-  background: rgba(15, 15, 15, 0.6);
+  background: rgba(15, 15, 15, 0.75);
   padding-top: 20px;
   padding-bottom: 20px;
 }
