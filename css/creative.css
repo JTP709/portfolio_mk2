@@ -16,8 +16,10 @@ hr {
   border-width: 3px;
   max-width: 50px;
 }
-hr.light {
-  border-color: #ff00f4;
+hr.dark {
+  border-color: black;
+  max-width: 50%;
+  margin-left: 0;
 }
 a {
   -webkit-transition: all 0.35s;
@@ -58,6 +60,15 @@ a img:hover, a img:focus {
 blockquote {
   font-style: italic;
   color: #777777; }
+
+.resume_font {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.resume_info {
+  color: black;
+  background-color: #e8e8e8;
+}
 
 #portrait_img {
   margin: 0 auto;
