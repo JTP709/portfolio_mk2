@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jon's Movie House</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+            background-color: #393A6C
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            color: #DBDBDB
+        }
+        .movie-tile:hover {
+            background-color: #535353;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #2745A2;
+        }
+        .nav-font {
+        font-family: 'Raleway', sans-serif;
+        font-size:35px;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+  <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand nav-font" href="../main.html"><b style="color: #EDED13">Jon's Top Movies</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Lm8p5rlrSkY" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" width="220" height="342">
+    <h2>Interstellar</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  Go Further</p>
+        <p><b>Rating:</b>   PG-13</p>
+        <p><b>Duration:</b> 2h 49m</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="hEJnMQG9ev8" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg" width="220" height="342">
+    <h2>Mad Max Fury Road</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  The Future Belongs to the Mad</p>
+        <p><b>Rating:</b>   PG-13</p>
+        <p><b>Duration:</b> 2h</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="7QXDPzx71jQ" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/85/Terminator2poster.jpg" width="220" height="342">
+    <h2>Terminator 2: Judgement Day</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  It's Nothing Personal.</p>
+        <p><b>Rating:</b>   R</p>
+        <p><b>Duration:</b> 2h 36m</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="fZ_JOBCLF-I" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/10/The_Lego_Movie_poster.jpg" width="220" height="342">
+    <h2>The Lego Movie</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  The Story of a Nobody who Saved Everybody</p>
+        <p><b>Rating:</b>   PG</p>
+        <p><b>Duration:</b> 1h 41m</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg" width="220" height="342">
+    <h2>The Dark Knight</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  Welcome to a  World Without Rules</p>
+        <p><b>Rating:</b>   PG-13</p>
+        <p><b>Duration:</b> 2h 32m</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Sh3HW3mZAoQ" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/91/Transformers-movieposter-west.jpg" width="220" height="342">
+    <h2>Transformers Movie</h2>
+    <div class="text-left">
+        <p><b>Tagline:</b>  Beyond Good, Beyond Evil, Beyond your Wildest Imagination.</p>
+        <p><b>Rating:</b>   PG</p>
+        <p><b>Duration:</b> 1h 30m</p>
+    </div>
+</div>
+
+    </div>
+  </body>
+</html>
