@@ -59,6 +59,10 @@ blockquote {
   font-style: italic;
   color: #777777; }
 
+#portrait_img {
+  margin: 0 auto;
+}
+
 .about_me_23 {
   font-size: 23px;
 }
