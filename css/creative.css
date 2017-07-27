@@ -59,11 +59,24 @@ blockquote {
   font-style: italic;
   color: #777777; }
 
+.about_me_28 {
+  font-size: 28px;
+}
+
+.about_me_25 {
+  font-size: 25px;
+}
+
 .icons_color {
   color: #ff00f4;
 }
+
 .icons_color:hover {
   color: #5457FF;
+}
+
+#services {
+  padding-top: 20px;
 }
 
 .section-heading {
