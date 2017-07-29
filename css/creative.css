@@ -165,10 +165,13 @@ blockquote {
       text-decoration: underline;
       color: #0085A1; }
 section {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 aside {
   padding: 50px 0;
+}
+#skills {
+  padding-top: 30px;
 }
 .no-padding {
   padding: 0;
