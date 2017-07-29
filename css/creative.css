@@ -333,6 +333,9 @@ header .header-content .header-content-inner p {
   font-family: 'Orbitron', sans-serif;
   min-height: 330px;
 }
+.skills-box {
+  min-height: 430px;
+}
 @media (max-width: 992px) {
   .service-box {
     margin: 20px auto 0;
