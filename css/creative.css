@@ -74,12 +74,21 @@ blockquote {
   margin: 0 auto;
 }
 
+.about_me_20 {
+  font-size: 20px;
+}
+
 .about_me_23 {
   font-size: 23px;
 }
 
 .about_me_25 {
   font-size: 25px;
+}
+
+.about_me_row {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .icons_color {
